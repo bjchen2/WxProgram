@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxprogram.dao.AreaDao">
+    <select id="queryAllArea" resultType="Area">
+        SELECT id, name, priority,create_time, last_edit_time FROM area ORDER BY priority DESC
+    </select>
+
+    <select id="queryAreaById" resultType="area">
+        SELECT id, name, priority,create_time, last_edit_time FROM area WHERE id = #{id}
+    </select>
+
+    <insert id="insertArea" parameterType="area" keyProperty="id">
+        INSERT INTO area (name<include refid="key"/> ) VALUES (#{name}<include refid="value"/>)
+    </insert>
+
+    <sql id="key">
+        <trim>
+            <if test="priority != null">,priority</if>
+            <if test="createTime != null">,create_time</if>
+            <if test="lastEditTime != null">,last_edit_time</if>
+        </trim>
+    </sql>
+    <sql id="value">
+        <trim>
+            <if test="priority != null">,#{priority}</if>
+            <if test="createTime != null">,#{createTime}</if>
+            <if test="lastEditTime != null">,#{lastEditTime}</if>
+        </trim>
+    </sql>
+
+    <delete id="delAreaById">
+        DELETE FROM area WHERE id = #{id}
+    </delete>
+
+    <update id="updateArea" parameterType="area">
+        UPDATE area
+        <set>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="name != null">name=#{name},</if>
+            <if test="lastEditTime != null">last_edit_time=#{lastEditTime}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+</mapper>
