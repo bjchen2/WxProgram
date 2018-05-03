@@ -10,6 +10,6 @@
   &emsp;IDE：IDEA 2017.3.3，<br/>
   &emsp;操作系统为：Windows10<br/>
   
-- 使用lombok包，springboot的很多特性，虽然知道没有视频讲解对新手很不友好,但能减少代码冗余量，学到更多。（其实是本人太懒，这些工具太好用）建议大家都能了解一下。<br/>**添加**响应结果集工具类，用于controller返回结果，若不喜好者，可以按照视频教学返回map<br/>
+- 使用lombok包，springboot的很多特性，虽然知道没有视频讲解对新手很不友好,但能减少代码冗余量，学到更多。（其实是本人太懒，这些工具太好用）建议大家都能了解一下。<br/>**添加**响应结果集工具类（util包下的FormatResponseUtil类），用于controller返回结果，若不喜好者，可以按照视频教学返回map<br/>
 - 为降低代码冗余，所有get/set方法均用lombok包的Data注解，具体使用方法可自行百度<br/>
  若不愿使用lombok包可将源码中所有bean的@Data注解去掉，加上get/set方法<br/>
