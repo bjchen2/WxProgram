@@ -1,6 +1,6 @@
 # WxProgram
 慕课网，微信小程序开发入门练习<br/>
-- 慕课网微信小程序开发源码，大体写法和视频一样，部分地方以个人理解做了适当更改，尽可能的**使用springboot特性，简化代码**（如：除去datasource和sessionFactory类、mybatis.xml的构造，直接在SpringBoot中配置）<br/>
+- 慕课网微信小程序开发源码，大体写法和视频一样，部分地方以个人理解做了适当更改，尽可能的**使用springboot特性，简化代码**（如：除去datasource和sessionFactory类、mybatis.xml的构造，直接在SpringBoot中配置;修改controller访问地址和访问方式，尽可能符合**restful规范**）<br/>
 参考资料：<br/>
 &emsp;https://www.imooc.com/learn/945<br/>
 &emsp;微信公众平台<br/>
