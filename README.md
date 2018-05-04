@@ -1,7 +1,7 @@
 # WxProgram
 慕课网，微信小程序开发入门练习<br/>
 
-**注：因部分后端变量命名与老师不同，所以前端开发时，若是跟着视频学习的，使用前，请先查看返回的JSON**
+**注：因部分后端变量命名与老师不同，，若是跟着视频学习的，后端开发前，请先查看area.sql文件，前端开发前，请先运行查看返回的JSON**
 - 慕课网微信小程序开发源码，大体写法和视频一样，部分地方以个人理解做了适当更改，尽可能的**使用springboot特性，简化代码**（如：除去datasource和sessionFactory类、mybatis.xml的构造，直接在SpringBoot中配置;修改controller访问地址和访问方式，尽可能符合**restful规范**）<br/>
 参考资料：<br/>
 &emsp;https://www.imooc.com/learn/945<br/>
