@@ -28,17 +28,18 @@ public class AreaController {
     }
 
     @PostMapping()
-    public ResponseResult addArea(Area area){
+    public ResponseResult addArea(@RequestBody Area area){
         return FormatResponseUtil.formatResponse(areaService.addArea(area));
     }
 
-    @DeleteMapping("/delete")
-    public ResponseResult delAreaById(int id){
+    @PostMapping("/delete")
+    public ResponseResult delAreaById(Integer id){
+        System.out.println(id);
         return FormatResponseUtil.formatResponse(areaService.delAreaById(id));
     }
 
     @PostMapping("/areaInfo")
-    public ResponseResult updateArea(Area area){
+    public ResponseResult updateArea(@RequestBody Area area){
         return FormatResponseUtil.formatResponse(areaService.updateArea(area));
     }
 }
