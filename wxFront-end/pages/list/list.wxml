@@ -1,0 +1,24 @@
+<!--pages/list/list.wxml-->
+<view class='container'>
+  <view class='widget'>
+    <text class='column'>ID</text>
+    <text class='column'>区域名</text>
+    <text class='column'>优先级</text>
+    <text class='link-column'>操作</text>
+  </view>
+  <scroll-view scroll-y="true">
+    <!--遍历list，变量名要和js中的名字相同，且item是定值，不可修改  -->
+    <block class='widget' wx:for="{{list}}">
+      <view class='widget'>
+        <text class='column'>{{item.id}}</text>
+        <text class='column'>{{item.name}}</text>
+        <text class='column'>{{item.priority}}</text>
+        <view class='link-column'>
+          <navigator class='link' url='../operation/operation?id={{item.id}}'>编辑</navigator>|
+          <text class='link' bindtap='delArea' data-id='{{item.id}}' data-index='{{index}}' data-name='{{item.name}}'>删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <button type='primary' bindtap='addArea'>添加区域信息</button>
+</view>
